@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhika Telugu</title>
+    <link rel="stylesheet" href="radhika.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1417404963926896');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1417404963926896&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card">
+
+            <!-- Logo -->
+            <div class="logo">
+                <img src="radhika.jpg" alt="Radhika Telugu">
+            </div>
+
+            <!-- Heading -->
+            <h1>Radhika Telugu</h1>
+            <p class="subtitle">Telugu traders kosam — మన భాషలో trading! 🙏</p>
+
+            <a href="https://t.me/+jjzFLZNaWrE5NjQ9" target="_blank" rel="noopener" class="btn cta-btn">
+                Telegram lo Join అవ్వండి
+            </a>
+
+            <!-- Features -->
+            <div class="features">
+                <p>📊 NIFTY · BANKNIFTY · SENSEX</p>
+                <p>✅ ప్రతి రోజు Daily Calls</p>
+                <p>⭐ 95% Accuracy</p>
+                <p>🎯 6+ సంవత్సరాల Experience</p>
+                <p>🗣️ Telugu lo simple explanation</p>
+            </div>
+
+            <!-- CTA -->
+            <a href="https://t.me/+jjzFLZNaWrE5NjQ9" target="_blank" rel="noopener" class="btn cta-btn">
+                ఇప్పుడే Join అవ్వండి – Free
+            </a>
+
+            <!-- Auto redirect (koi pixel event nahi) -->
+            <h3><span id="t">10</span> సెకన్లలో Telegram కి redirect అవుతుంది...</h3>
+
+            <!-- Disclaimer -->
+            <p class="disclaimer">
+                Disclaimer: ఇది educational purpose కోసం మాత్రమే. This is for educational purposes only. We are not SEBI registered.
+            </p>
+
+        </div>
+    </div>
+
+    <script>
+        var TG_LINK = 'https://t.me/+jjzFLZNaWrE5NjQ9';
+
+        // ---- Subscribe event: sirf CTA click par, ek session me sirf ek baar ----
+        var subscribeFired = false;
+        try {
+            subscribeFired = sessionStorage.getItem('tg_subscribe_fired') === '1';
+        } catch (e) {}
+
+        function fireSubscribeOnce() {
+            if (subscribeFired) return;          // double / repeat click block
+            subscribeFired = true;
+            try { sessionStorage.setItem('tg_subscribe_fired', '1'); } catch (e) {}
+
+            if (typeof fbq === 'function') {
+                var eventId = 'sub_' + Date.now() + '_' + Math.random().toString(36).slice(2, 10);
+                fbq('track', 'Subscribe', {}, { eventID: eventId });
+            }
+        }
+
+        document.querySelectorAll('.cta-btn').forEach(function (btn) {
+            btn.addEventListener('click', fireSubscribeOnce);
+        });
+
+        // ---- Auto redirect (10 sec): koi event fire nahi hota ----
+        var t = 10;
+        var timerEl = document.getElementById('t');
+        var timer = setInterval(function () {
+            t--;
+            if (t > 0) {
+                timerEl.innerText = t;
+            } else {
+                clearInterval(timer);
+                window.location.href = TG_LINK;
+            }
+        }, 1000);
+    </script>
+
+</body>
+
+</html>
